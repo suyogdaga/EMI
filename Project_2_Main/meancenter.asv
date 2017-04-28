@@ -1,0 +1,14 @@
+function y= meancenter(data)
+ k = zeros(size(data,1),1);
+
+ for i = 1:size(data,2)
+      k(:,1) = k(:,1) + data(:,i);
+ end
+ y = k/size(data,2);
+ 
+ for i = 1:size(data,2)
+    data(:,i) = data(:,i) - y;
+end
+
+ 
+end
